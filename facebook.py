@@ -1,5 +1,6 @@
 users=[]
 posts=[]
+loggedin=[]
 class User(object):
 	def __init__(self,name,email,password):
 		self.name=name
@@ -16,7 +17,6 @@ class User(object):
 	def add_post(self,):
 		post1=Post(text,self.email)
 		posts.append(post1)
-		print(self.name+'has posted:'+text)
 	def get_userInfo (self):
 		print('Name:'+self.name)
 		print('email:'+self.email)
@@ -29,14 +29,42 @@ class Post(object):
 	def __init__(self,text,autor):
 		self.text=text
 		self.autor=author
-user1=User('nicole','nicolekit@gmail.com','12345')
-user1.add_friend('natalie')
+		print()
+		posts.append(self)
 
-user1.get_userInfo()
+		comments=[]
 		
-	 
-	
+
+class comment(Post):
+	def comment(self,text):
+		print(text.self)
+		append.comments()
+
+def login():
+ 	print('log in')	
+ 	email=input('your email')
+ 	password=input('your pasword')
+ 	for user in users:
+ 		if email==User.email:
+	 		if password==User.password:
+	 			logdin=user
+
+
+while 0==0:
+	option=input('what do you wanna do')
+	if option=='login':
+		login()
 		
+	elif option=='sign up':
+
+
+
+
+
+
+
+
+
 
 
 
