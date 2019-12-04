@@ -38,9 +38,7 @@ class comment(Post):
     def comment(self,text):
         print(text.self)
         append.comments()
-def pr():
-    print('menu-')
-    print('add friend')
+
 
 
 # A MENEO TO GET THE LOG IN SYSTEM AND THE CODE RUNING
@@ -56,6 +54,12 @@ while 0==0:
                 print('yess')
                 if password5==new_user.password :
                     print('you logged in succsesfully')
+                    while 0==0:
+                        x=input('what do you wanna do?')
+                        if x=='add friend':
+
+                            new_user.add_friend(o)
+                            
                     
 
                 else:
