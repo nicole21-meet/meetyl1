@@ -7,32 +7,34 @@ class User(object):
             self.email=email
             self.password=password
             self.friend_list = []
+
     def add_friend(self,email):
 	    self.friend_list.append(email)
 	    print(self.name+' has added '+ email+'as a friend')
     def remov(self,email):
-	    friend_list.remove(email)
+	    self.friend_list.remove(email)
 	    print(self.name+' has removed '+ email+'from his friend list')
-    def add_post(self,):
+    def add_post(self,text):
 	    post1=Post(text,self.email)
-	    posts.append(post1)
+
+
     def get_userInfo (self):
 	    print('Name:'+self.name)
 	    print('email:'+self.email)
 	    print('password:'+self.password)
-	    print("friend:"+str(self.friend_list))
+	    print("my friends:"+str(self.friend_list))
 
 
 
 class Post(object):
-    def __init__(self,text,autor):
+    def __init__(self,text,author):
 	    self.text=text
-	    self.autor=author
-	    print()
+	    self.author=author
+	    print(text)
 	    posts.append(self)
 
 	    comments=[]
-		
+
 
 class comment(Post):
     def comment(self,text):
@@ -56,10 +58,27 @@ while 0==0:
                     print('you logged in succsesfully')
                     while 0==0:
                         x=input('what do you wanna do?')
+                        
                         if x=='add friend':
+                            name=input('the email of your friend')
 
-                            new_user.add_friend(o)
-                            
+                            new_user.add_friend(name)
+
+                        if x=='remove':
+                            ko=input('the email of who u wonna remove')
+
+                            new_user.remov(ko)
+                        if x=='get my info':
+                            new_user.get_userInfo()
+                        
+                        if x=='post':
+                            yut=input('what do you wonna post?')
+                            new_user.add_post(yut)
+
+
+
+
+
                     
 
                 else:
@@ -72,8 +91,5 @@ while 0==0:
         email1=input('your email-')
         password1=input('your password-')
         new_user = User(name1,email1,password1)
-        print(new_user.email)
         users.append(new_user)
         
-
-
