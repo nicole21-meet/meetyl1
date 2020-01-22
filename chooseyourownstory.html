@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chose your own story </title>
+	<link rel="stylesheet" type="text/css" href="chooseyourownstory.css">
+
+
+</head> 
+
+<body>
+	<h1>the apocolyps </h1> <!-- title -->
+	<p id='text'> you woke up all alone in your house what do you do?</p> <!-- storyline -->
+	<button id='left' onclick="leftfunction()" > go outside and search for people</ button> <!-- left bottum -->
+	<button id='right' onclick="rightfunction()"> stay inside and wait for someone to come</button> <!-- right buuton -->
+	<script>
+		var count=0;
+		
+		function leftfunction(){
+			if(count===0){
+			document.getElementById('text').innerHTML="you go out of your house and see from afar people with missing organs that look kinda greenish then you realize the apocalis have come.suddnley you hear a growl from bihind you you think its azombie what do you do? ";
+			document.getElementById('left').innerHTML="kill him";
+			document.getElementById('right').innerHTML="run away";
+		}else if(count===1){
+			document.getElementById('text').innerHTML="you take a shoval that is infron of you but when you try to attack the ";
+			document.getElementById('right').innerHTML="join them";
+			document.getElementById('left').innerHTML="run away";
+
+		}else if(count===2){
+			document.getElementById('text').innerHTML="";
+			document.getElementById('right').innerHTML="";
+			document.getElementById('left').innerHTML="2";
+		}else if(count===3){
+			document.getElementById('text').innerHTML="";
+			document.getElementById('right').innerHTML="";
+			document.getElementById('left').innerHTML="3";
+
+		}
+		count++; }
+		// ===========
+		function rightfunction(){
+			if(count===0){
+			document.getElementById('text').innerHTML="you stayed inside and you heard a boomin sound from the yard";
+			document.getElementById('right').innerHTML="";
+			document.getElementById('left').innerHTML="";
+
+			}if(count===1){
+			document.getElementById('text').innerHTML="r";
+			document.getElementById('right').innerHTML="t";
+			document.getElementById('left').innerHTML="o";
+
+			}if(count===2){
+			document.getElementById('text').innerHTML="n";
+			document.getElementById('right').innerHTML="m";
+			document.getElementById('left').innerHTML="a";
+			}
+
+			count++
+			}
+
+			
+
+
+	</script>
+		
+
+
+
+	
+
+</body>
